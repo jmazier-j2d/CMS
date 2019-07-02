@@ -19,6 +19,9 @@ class CmsServiceProvider extends ServiceProvider
      */
     public function register()
     {
+    }
+    
+    public function boot() {
         $loader = AliasLoader::getInstance();
 
         $loader->alias('Cms', \Grafite\Cms\Facades\CmsServiceFacade::class);
