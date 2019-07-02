@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Middleware;
+use Illuminate\Auth\Access\Gate as Gate;
+use Illuminate\Support\Facades\Auth;
 
 use Closure;
-use Config;
 
-class GrafiteCmsApi
+
+class GrafiteCms
 {
+    
     /**
      * Handle an incoming request.
      *
@@ -17,10 +20,10 @@ class GrafiteCmsApi
      */
     public function handle($request, Closure $next)
     {
-        if (Config::get('cms.api-token') == $request->get('token')) {
-            return $next($request);
+        if (Auth::check() && ($user = $request->user())) {
+            if ($user->isRoot())
+                return $next($request);
         }
-
         return response('Unauthorized.', 401);
     }
 }
