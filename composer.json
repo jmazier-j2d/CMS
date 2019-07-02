@@ -1,5 +1,5 @@
 {
-    "name": "grafite/cms",
+    "name": "grafite-fork-laravel-5-8/cms",
     "description": "Add a CMS to any Laravel app/website to gain control of: pages, blogs, galleries, events, custom modules, images and more.",
     "license": "MIT",
     "authors": [
