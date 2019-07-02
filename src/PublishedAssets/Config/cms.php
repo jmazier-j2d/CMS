@@ -30,7 +30,7 @@ return [
      * --------------------------------------------------------------------------
     */
 
-    'db-prefix' => '',
+    'db-prefix' => 'cms',
 
     /*
      * --------------------------------------------------------------------------
@@ -126,7 +126,7 @@ return [
      * --------------------------------------------------------------------------
     */
 
-    'backend-title' => 'Grafite CMS',
+    'backend-title' => 'Djigg CMS',
     'backend-route-prefix' => 'cms',
     'backend-theme' => 'standard', // dark, standard
     'registration-available' => false,
